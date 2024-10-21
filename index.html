@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="content contCategory">
+            <button class="categButtons" data="Rock">Rock</button>
+            <button class="categButtons" data="Classic">Classic</button>
+            <button class="categButtons" data="Jazz">Jazz</button>
+            <button class="categButtons" data="Rabis">Rabis</button>
+            <button class="categButtons" data="Rap">Rap</button>
+        </div>
+        <div class="content audioplayer">
+            <div class="overflow">
+                <audio src="" id="audio"></audio>
+                <div class="top-audioplayer">
+                    <div class="time-player">
+                        <p class="song-time">0:00</p>
+                        <input type="range" value="0" max="100" class="song-range">
+                        <p class="song-duration">0:00</p>
+                    </div>
+                    <div class="title">
+                        <h2 class="songName">Tourner Dans Le Vide</h2>
+                        <h3 class="singerName">Indila</h3>
+                        <h4 class="category">France</h4>
+                    </div>
+                </div>
+                <div class="for-img">
+                    <img src="images/indila.jpg" alt="">
+                </div>
+                <div class="menuBar-audioplayer">
+                    <div class="speeds">
+                        <button class="speedsButton">0.25</button>
+                        <button class="speedsButton">0.5</button>
+                        <button class="speedsButton">1</button>
+                        <button class="speedsButton">1.25</button>
+                        <button class="speedsButton">1.5</button>
+                    </div>
+                    <div class="menu-bar">
+                        <i class="fa fa-undo undoSecond"></i>
+                        <i class="fa fa-backward prev"></i>
+                        <i class="fa fa-play play-pause"></i>
+                        <i class="fa fa-forward next"></i>
+                        <i class="fa fa-repeat undoFirst"></i>
+                    </div>
+                    <div class="theEnd">
+                        <div class="audioVolume">
+                            <i class="fa fa-volume-up"></i>
+                            <input type="range" class="audio-volume" value="50" max="100">
+                        </div>
+                        <div class="repeat">
+                            <button class="startRepeat">A</button>
+                            <button class="endRepeat">B</button>
+                            <button class="offRepeat">OFF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content contSongs">
+            <!-- <div>
+                <h2>Do I Wanna Know</h2>
+                <h3>Arctic Monkeys</h3>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

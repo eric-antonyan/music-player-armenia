@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(30deg, deepskyblue, cyan, teal, cyan, deepskyblue);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100vh;
+}
+
+.content {
+    border: 3px double teal;
+    box-shadow: 0 0 20px 4px cyan inset, 0 0 10px 2px white inset;
+}
+
+.audioplayer {
+    background: url(images/indila.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.overflow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-audioplayer {
+    width: 100%;
+    height: 30vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time-player {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.time-player p {
+    color: transparent;
+    font-size: 40px;
+    background: linear-gradient(deepskyblue, cyan, teal, cyan, deepskyblue);
+    -webkit-background-clip: text;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.song-range {
+    appearance: none;
+    width: 250px;
+    height: 4px;
+    background: linear-gradient(to right, deepskyblue, cyan, teal, cyan, deepskyblue);
+    box-shadow: 0 0 2px white;
+}
+
+.song-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    background: linear-gradient(deepskyblue, cyan, teal, cyan, deepskyblue);
+    box-shadow: 0 0 2px white, 0 0 4px white;
+}
+
+.title {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.title h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-style: italic;
+    text-shadow: 1px 1px deepskyblue;
+    letter-spacing: 3px;
+    font-size: 32px;
+}
+
+.title h3 {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    text-shadow: 1px 1px deepskyblue;
+    letter-spacing: 2px;
+}
+
+.title h4 {
+    color: deepskyblue;
+    text-shadow: 1px 1px white;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.for-img {
+    width: 100%;
+    height: 50vh;
+}
+
+.for-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menuBar-audioplayer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.speeds {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.speedsButton {
+    width: 90px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 20px cyan inset,0 0 10px white inset;
+    color: teal;
+    font-size: 20px;
+    text-shadow: 1px 1px white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.speedsButton:hover {
+    background: cyan;
+    color: white;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px white, 2px 2px 5px 1px black,0 0 4px black inset;
+}
+
+.menu-bar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-bar i {
+    width: 70px;
+    height: 35px;
+    background: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.menu-bar i:hover {
+    border-radius: 5px;
+    box-shadow: 0 0 10px white inset;
+    transform: scale(.95);
+}
+
+.theEnd {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: 20px;
+}
+
+.audioVolume {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.audioVolume i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.audio-volume {
+    appearance: none;
+    width: 200px;
+    height: 1px;
+    background: deepskyblue;
+    box-shadow: 0 0 10px white;
+}
+
+.audio-volume::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: teal;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.repeat {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.repeat button {
+    width: 50px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 10px cyan inset,0 0 5px white inset;
+    color: teal;
+    font-size: 12px;
+    text-shadow: 1px 1px white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.repeat button:hover {
+    background: cyan;
+    color: white;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px white, 2px 2px 5px 1px black,0 0 4px black inset;
+}
+
+.contCategory {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.categButtons:first-child {
+    margin-top: 10%;
+}
+
+.categButtons {
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 20px cyan inset,0 0 10px white inset;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+}
+
+.categButtons:hover {
+    background: cyan;
+    color: white;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px white, 2px 2px 5px 1px black,0 0 4px black inset;
+}
+
+.contSongs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contSongs div {
+    width: 80%;
+    height: 60px;
+    box-shadow: 0 0 20px 5px white inset;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.contSongs div:first-child {
+    margin-top: 10%;
+}
